@@ -6,8 +6,7 @@
   </div>
 </div>
 
-# 个人好友添加简易界面
-预览效果：https://mp.tgmeng.com
+# <a href="https://mp.tgmeng.com" target="_blank">👀个人好友添加简易界面(点击查看demo)</a>
 
 <img src="https://cdn.jsdelivr.net/gh/CandyDream6/jsdelivr/github/image/wechat/project-demo.png" />
 
