@@ -11,6 +11,8 @@
 
 <img src="https://cdn.jsdelivr.net/gh/CandyDream6/jsdelivr/github/image/wechat/project-demo.png" />
 
+## 🔨可以<a href="https://vercel.com" target="blank">vercel</a>直接部署
+
 ## Star History
 <a href="https://star-history.com/#CandyDream6/wechat-offcial&Date">
  <picture>
