@@ -1,43 +1,178 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/CandyDream6/jsdelivr/github/image/wechat/tgmenmglogo.png">
   <script src="https://cdn.tailwindcss.com"></script>
-  <title>糖果梦微信</title>
+  <title>糖果梦技术社区</title>
 
-  <!--51la数据统计-->
+  <!-- 增强版 Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#3b82f6',
+              600: '#2563eb',
+            },
+            dark: {
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            },
+            candy: {
+              pink: '#FF9CDA',
+              blue: '#8BD3FF',
+              purple: '#B5B9FF'
+            }
+          },
+          boxShadow: {
+            'card': '0 10px 40px -10px rgba(0, 0, 0, 0.1)',
+            'card-dark': '0 10px 40px -10px rgba(0, 0, 0, 0.3)',
+            'glow': '0 0 15px rgba(139, 211, 255, 0.5)',
+            'glow-dark': '0 0 20px rgba(139, 211, 255, 0.3)'
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- 51la 统计代码 -->
   <script>
     !function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"3MU79oav8Tu9kZvF",ck:"3MU79oav8Tu9kZvF",autoTrack:true,hashMode:true,screenRecord:true});
   </script>
-  <!--51la性能监控-->
-  <script>
-    !(function(c,i,e,b){
-      var h=i.createElement("script");
-      var f=i.getElementsByTagName("script")[0];
-      h.type="text/javascript";
-      h.crossorigin=true;
-      h.onload=function(){new c[b]["Monitor"]().init({id:"3MU6wqxiqJaP5OV2",sendSuspicious:true,sendSpaPv:true});};
-      f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");
-  </script>
+<!--  umami统计-->
+  <script defer src="https://umami.tgmeng.com/script.js" data-website-id="88da1d11-a9b7-4a4d-ab1d-38b39e080bf7"></script>
 
+  <!-- 优化字体和样式 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-image:
+              radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.1) 0px, transparent 50%),
+              radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.1) 0px, transparent 50%);
+    }
+    body.dark {
+      background-image:
+              radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.05) 0px, transparent 50%),
+              radial-gradient(at 0% 50%, hsla(355, 100%, 93%, 0.05) 0px, transparent 50%);
+    }
+    .transition-smooth {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-glass {
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+    .dark .card-glass {
+      background-color: rgba(30, 41, 59, 0.85);
+    }
+    .text-gradient {
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  </style>
 </head>
-<body>
-  <div class="min-w-[375px] h-[100vh] flex justify-center items-center bg-[#f6f7f8] dark:bg-[#1e2020]">
-    <div class="p-8 rounded-[16px] bg-white dark:bg-[#000]">
-      <div class="flex justify-center items-center">
-        <img class="w-[256px] h-[256px] rounded-xl" src="https://tgmeng-1305951218.cos.ap-shanghai.myqcloud.com/Social_Media_Account/tgmeng_wechat.png">
-      </div>
-      <div class="mt-2 my-4 text-[13px] text-center text-black/50 dark:text-white/50">扫描添加微信好友进交流群，备注：进交流群</div>
-      <div class="w-full flex items-center py-3 rounded-[10px] bg-[#f7f7f7] dark:bg-[#303134]">
-        <img class="w-[48px] h-[48px] mx-4 rounded-full" src="https://cdn.jsdelivr.net/gh/CandyDream6/jsdelivr/github/image/wechat/wechat.jpg">
-        <div class="flex flex-col justify-between">
-          <div class="font-bold text-black dark:text-white">糖果梦 Coding</div>
-          <div class="text-[12px] text-black/50 dark:text-white/50">热爱可抵岁月漫长</div>
+
+<body class="bg-gray-50 dark:bg-dark-900 min-h-screen flex items-center justify-center p-4 transition-smooth">
+<div class="w-full max-w-md mx-auto">
+  <!-- 主卡片 -->
+  <div class="card-glass dark:bg-opacity-90 rounded-3xl shadow-card dark:shadow-card-dark overflow-hidden transition-smooth border border-gray-200 dark:border-gray-700/50">
+
+    <!-- 头部 -->
+    <div class="p-6 pb-4 text-center">
+      <h1 class="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+        <span class="bg-clip-text text-transparent"
+              style="background-image: linear-gradient(to right, #EF90B9, #00B1B4, #E94C4C);">糖果梦 技术社区</span>
+      </h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        加入开发者交流群，与<span class="font-medium text-primary-500 dark:text-primary-400">500+</span>佬友一起成长
+      </p>
+    </div>
+
+    <!-- 二维码区域 -->
+    <div class="px-6 flex justify-center" style="padding: 1rem">
+      <div class="relative group">
+        <img
+                src="https://r2-tgmeng.tgmeng.com/tgmeng-wechat.png"
+                alt="微信二维码"
+                class="w-64 h-64 rounded-xl border-2 border-gray-200 dark:border-transparent transition-smooth shadow-lg group-hover:shadow-glow dark:group-hover:shadow-glow-dark animate-float"
+        >
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-smooth">
+          <div class="absolute -inset-1 bg-gradient-to-r from-candy-pink/40 to-candy-blue/40 rounded-xl blur-md"></div>
         </div>
       </div>
     </div>
+
+    <!-- 加入指引 -->
+    <div class="px-6 py-3 bg-gray-100/50 dark:bg-gray-700/30 mx-6 rounded-lg border border-gray-200 dark:border-gray-600/50">
+      <div class="flex items-start space-x-3">
+        <div class="flex-shrink-0 mt-0.5">
+          <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+        </div>
+        <div class="text-sm text-gray-600 dark:text-gray-300">
+          请使用微信<strong class="text-primary-500 dark:text-primary-400">扫描上方二维码，</strong>
+          备注<span class="font-medium text-candy-pink">「技术交流」</span>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 官网资料卡 -->
+    <a href="https://www.tgmeng.com" target="_blank" data-umami-event="官网" data-umami-event-name="官网">
+    <div class="mx-6 my-6 p-4 bg-white dark:bg-dark-700 rounded-xl flex items-center space-x-4 transition-smooth border border-gray-200 dark:border-gray-600/50 shadow-sm hover:shadow-md">
+      <img
+              src="https://r2-tgmeng.tgmeng.com/tgmeng-logo.png"
+              alt="微信头像"
+              class="w-12 h-12 rounded-full border-2 border-white dark:border-transparent shadow-sm"
+      >
+      <div class="flex-1 min-w-0">
+        <h3 class="font-semibold text-gray-800 dark:text-white truncate">糖果梦</h3>
+        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center">
+          <svg class="w-3 h-3 mr-1 text-candy-blue" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+          </svg>
+          甜味漫过星河，星河溺于甜味
+        </p>
+      </div>
+      <div class="flex-shrink-0">
+        <span class="px-2 py-1 text-xs font-medium rounded-full bg-candy-blue/10 text-candy-blue dark:bg-candy-blue/20">官网</span>
+      </div>
+    </div>
+    </a>
+
   </div>
+
+  <!-- 暗黑模式切换 -->
+<!--  <div class="mt-6 flex justify-center items-center space-x-4">-->
+<!--    <button onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600 transition-smooth">-->
+<!--      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">-->
+<!--        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>-->
+<!--      </svg>-->
+<!--    </button>-->
+<!--    <a href="#" class="text-xs text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-smooth">常见问题</a>-->
+<!--    <span class="text-xs text-gray-400">|</span>-->
+<!--    <a href="#" class="text-xs text-gray-500 dark:text-gray-400 hover:text-primary-500 dark:hover:text-primary-400 transition-smooth">社区公约</a>-->
+<!--  </div>-->
+</div>
 </body>
 </html>
